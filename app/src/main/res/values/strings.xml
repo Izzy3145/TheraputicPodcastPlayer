@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MindfulMoments</string>
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
+    <string name="angry">Angry</string>
+    <string name="anxious">Anxious</string>
+    <string name="main_intro">How do you feel?</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_chat">Chat</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_playing">Now Playing</string>
+    <string name="title_happy">This activity will show a list of podcasts discussing happy emotions</string>
+    <string name="textview_now_playing">This screen displays information about what is currently playing</string>
+    <string name="to_chat_forum">Discuss on chat forum</string>
+</resources>
