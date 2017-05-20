@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent happyIntent = new Intent(MainActivity.this, HappyActivity.class);
                 startActivity(happyIntent);
-                Toast.makeText(view.getContext(),
-                        "You, and *number of clicks* other people are feeling happy right now!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -49,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent sadIntent = new Intent(MainActivity.this, SadActivity.class);
                 startActivity(sadIntent);
-                Toast.makeText(view.getContext(),
-                        "You, and *number of clicks* other people are feeling sad right now!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -79,5 +75,5 @@ public class MainActivity extends AppCompatActivity {
                         return false;
                     }
                 });
-}
+    }
 }

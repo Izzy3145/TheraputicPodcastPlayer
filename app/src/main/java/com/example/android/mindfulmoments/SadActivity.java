@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -20,40 +21,45 @@ public class SadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sad);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ArrayList<String> podcasts = new ArrayList<String>();
-        podcasts.add(0,"podcast discussing sad emotions - 1");
-        podcasts.add(1,"podcast discussing sad emotions - 2");
-        podcasts.add(2,"podcast discussing sad emotions - 3");
-        podcasts.add(3,"podcast discussing sad emotions - 4");
-        podcasts.add(4,"podcast discussing sad emotions - 5");
-        podcasts.add(5,"podcast discussing sad emotions - 6");
-        podcasts.add(6,"podcast discussing sad emotions - 7");
-        podcasts.add(7,"podcast discussing sad emotions - 8");
-        podcasts.add(8,"podcast discussing sad emotions - 9");
-        podcasts.add(9,"podcast discussing sad emotions - 10");
-        podcasts.add(10,"podcast discussing sad emotions - 11");
-        podcasts.add(11,"podcast discussing sad emotions - 12");
-        podcasts.add(12,"podcast discussing sad emotions - 13");
-        podcasts.add(13,"podcast discussing sad emotions - 14");
-        podcasts.add(14,"podcast discussing sad emotions - 15");
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, podcasts);
+        //create ArrayList to hold objects of the Podcast class, and add objects to the ArrayList
+        ArrayList<Podcast> podcasts = new ArrayList<>();
+        podcasts.add(new Podcast("listening number one", "Dr. A. Psychologist"));
+        podcasts.add(new Podcast("listening number two", "Dr. B. Psychologist"));
+        podcasts.add(new Podcast("listening number three", "Dr. C. Psychologist"));
+        podcasts.add(new Podcast("listening number four", "Dr. D. Psychologist"));
+        podcasts.add(new Podcast("listening number five", "Dr. A. Psychologist"));
+        podcasts.add(new Podcast("listening number six", "Dr. B. Psychologist"));
+        podcasts.add(new Podcast("listening number seven", "Dr. C. Psychologist"));
+        podcasts.add(new Podcast("listening number eight", "Dr. D. Psychologist"));
+        podcasts.add(new Podcast("listening number nine", "Dr. A. Psychologist"));
+        podcasts.add(new Podcast("listening number ten", "Dr. B. Psychologist"));
+        podcasts.add(new Podcast("listening number ten", "Dr. C. Psychologist"));
+        podcasts.add(new Podcast("listening number ten", "Dr. D. Psychologist"));
+
+        //create custom adapter
+        PodcastAdapter adapter = new PodcastAdapter(this, podcasts);
+        //intitialise listView object
         ListView listView = (ListView) findViewById(R.id.activity_sad);
-        listView.setAdapter(itemsAdapter);
+        //Inflate header view
+        ViewGroup headerView = (ViewGroup) getLayoutInflater().inflate(R.layout.sad_list_header, listView, false);
+        //add header to listView
+        listView.addHeaderView(headerView);
+        //set the itemsAdapter to the listView
+        listView.setAdapter(adapter);
 
-        //set intent
-
+        //set event listener on list views, with intent
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                // Launching new Activity on selecting single List Item
+                // Launching Now PLaying Activity on selecting single List Item
                 Intent i = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 // sending data to new activity
                 startActivity(i);
             }
         });
-
     }
 }

@@ -3,24 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/action_home"
-        android:title="@string/menu_home"
         android:icon="@drawable/home"
+        android:title="@string/menu_home"
         app:showAsAction="withText"/>
 
-    <item android:id="@+id/action_chat"
-        android:title="@string/menu_chat"
-        android:icon="@drawable/chat"
+    <item
+        android:id="@+id/action_playing"
+        android:icon="@drawable/ic_play_circle_black"
+        android:title="@string/menu_playing"
         app:showAsAction="withText" />
 
-    <!--
-    <item android:id="@+id/action_search"
-        android:title="@string/menu_search"
-        android:icon="@drawable/home2"
-        app:showAsAction="withText"/>
--->
+    <item android:id="@+id/action_chat"
+        android:icon="@drawable/chat"
+        android:title="@string/menu_chat"
+        app:showAsAction="withText" />
 
-    <item android:id="@+id/action_playing"
-        android:title="@string/menu_playing"
-        android:icon="@drawable/playing"
-        app:showAsAction="withText"/>
 </menu>

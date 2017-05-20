@@ -4,10 +4,17 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
-    <color name="black">#100B00</color>
-    <color name="purple">#304474</color>
-    <color name="red">#8B3063</color>
+    <color name="dark_teal">#090C15</color>
+    <color name="teal">#304474</color>
+    <color name="purple">#8B3063</color>
+    <color name="accent_purple">#C2418A</color>
     <color name="green">#7FA327</color>
     <color name="yellow">#AA883B</color>
-    <color name="dark_blue">#0B1B40</color>
+    <color name="dark_yellow">#1E180B</color>
+    <color name="translucent_teal">#801D2844</color>
+    <color name="translucent_green">#607FA327</color>
+    <color name="translucent_yellow">#60AA883B</color>
+    <color name="dark_purple">#190912</color>
+    <color name="translucent_purple">#80521D3B</color>
+    <color name="dark_green">#181E08</color>
 </resources>

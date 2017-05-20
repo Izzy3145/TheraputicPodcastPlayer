@@ -9,7 +9,11 @@
     <string name="menu_chat">Chat</string>
     <string name="menu_search">Search</string>
     <string name="menu_playing">Now Playing</string>
-    <string name="title_happy">This activity will show a list of podcasts discussing happy emotions</string>
-    <string name="textview_now_playing">This screen displays information about what is currently playing</string>
+    <string name="title_happy">This activity will show a list of podcasts that discuss happiness and happy emotions. One such podcast is included. If developed further, it would be great if users could share/contribute podcasts to this list, perhaps using FileProvider</string>
+    <string name="title_sad">This activity will show a list of podcasts that discuss sadness and sad emotions. If developed further, it would be nice to have a counter to display the number of times each podcast has been clicked on; this could be done by extending the setOnClickListener method</string>
+    <string name="title_now_playing">This screen displays information about the podcast that is currently playing, with playback options and a button to take users to the chat forum should they want to discuss the podcast. The MediaPlayer class and the AudioFocus class would need to be implemented to allow podcasts to play.</string>
+    <string name="podcast_author">Dr. X Psychologist</string>
+    <string name="podcast_title">Listening number xxx</string>
     <string name="to_chat_forum">Discuss on chat forum</string>
+    <string name="chat_forum_explanation">This activity is a chat forum, designed to encourage users to share their thoughts about the podcasts that they have listened to. If developed further, this part would need quite a lot of work; the conversations would need to be stored and added to in real-time. One possible way to do this is to use SharedPreferenes and to call the edit() method on it. </string>
 </resources>
